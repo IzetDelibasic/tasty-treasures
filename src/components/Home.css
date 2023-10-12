@@ -143,6 +143,85 @@ a {
   }
 }
 
+/* About Section */
+
+.about {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.about_img{
+  background-image: url('./images/chef.gif');
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  float: right;
+  margin: 30px;
+  margin-right: 160px;
+  border-radius: 8px; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s ease-in-out;
+}
+
+.about_img:hover {
+  transform: scale(1.05); 
+}
+
+
+.about_section {
+  width: 100%;
+  float: left;
+}
+
+.about_taital_main {
+  width: 100%;
+  float: left;
+  padding: 120px 0px;
+  margin-left: 130px;
+}
+
+.about_taital {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #808080;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #4c4c4b;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.about_text {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #4c4c4b;
+  margin: 0px;
+  padding-top: 10px;
+}
+
+.first-row {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px; 
+}
+
+
+
+
 
 /* Login Section */
 
