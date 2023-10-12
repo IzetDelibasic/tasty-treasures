@@ -73,7 +73,6 @@ a {
 	}
 
 }
-
 @media (min-width: 1025px) {
 	.header {
 		flex-direction: row;
@@ -147,5 +146,79 @@ a {
 
 /* Login Section */
 
-
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+* {
+  font-family: 'Quicksand', sans-serif;
+}
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+  margin: 20px;
+  padding: 20px;
+}
+.signin .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.signin .content h2 {
+  font-size: 2em;
+  color: #808080;
+  text-transform: uppercase;
+}
+.signin .content .form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.signin .content .form .inputBox {
+  position: relative;
+  width: 100%;
+}
+.signin .content .form .inputBox input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 25px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+.signin .content .form .inputBox i {
+  position: absolute;
+  left: 0;
+  padding: 15px 10px;
+  font-style: normal;
+  color: #aaa;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.signin .content .form .inputBox input:focus ~ i,
+.signin .content .form .inputBox input:valid ~ i {
+  transform: translateY(-7.5px);
+  font-size: 0.8em;
+  color: #fff;
+}
+.signin .content .form .inputBox input[type="submit"] {
+  padding: 10px;
+  background: #808080;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+}
+input[type="submit"]:active {
+  opacity: 0.6;
+}
 
