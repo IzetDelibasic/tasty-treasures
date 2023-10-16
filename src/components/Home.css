@@ -490,3 +490,12 @@ input[type="submit"]:active {
   color: #fff;
 }
 
+.social-icon__item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: #fff;
+}

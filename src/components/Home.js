@@ -107,20 +107,29 @@ export const Home = () => {
             <div class="wave" id="wave3"></div>
             <div class="wave" id="wave4"></div>
           </div>
-          <ul class="social-icon">
-            <li class="social-icon__item" href="https://www.facebook.com/izet.delibasic/">
-              <FontAwesomeIcon icon={faFacebook} class="social-icon__icon" />
-            </li>
-            <li class="social-icon__item" href="https://www.instagram.com/delibasic55/">
-              <FontAwesomeIcon icon={faInstagram} class="social-icon__icon" />
-            </li>
-            <li class="social-icon__item" href="https://www.linkedin.com/in/izet-delibasic/">
-              <FontAwesomeIcon icon={faGithub} class="social-icon__icon" />
-            </li>
-            <li class="social-icon__item" href="https://github.com/IzetDelibasic">
-              <FontAwesomeIcon icon={faLinkedin} class="social-icon__icon" />
-            </li>
-          </ul>
+          <ul className="social-icon">
+  <li className="social-icon__item">
+    <a href="https://www.facebook.com/izet.delibasic/">
+      <FontAwesomeIcon icon={faFacebook} className="social-icon__icon" />
+    </a>
+  </li>
+  <li className="social-icon__item">
+    <a href="https://www.instagram.com/delibasic55/">
+      <FontAwesomeIcon icon={faInstagram} className="social-icon__icon" />
+    </a>
+  </li>
+  <li className="social-icon__item">
+    <a href="https://www.linkedin.com/in/izet-delibasic/">
+      <FontAwesomeIcon icon={faLinkedin} className="social-icon__icon" />
+    </a>
+  </li>
+  <li className="social-icon__item">
+    <a href="https://github.com/IzetDelibasic">
+      <FontAwesomeIcon icon={faGithub} className="social-icon__icon" />
+    </a>
+  </li>
+</ul>
+
 
           <ul class="menu">
             <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
