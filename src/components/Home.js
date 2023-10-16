@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'; 
 import { auth } from './FirebaseConfig';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
+
 
 export const Home = () => {
   const [login, setLogin] = useState(false);
@@ -95,7 +99,41 @@ export const Home = () => {
             <button className='reglog' name='reglog'>{login ? "Login" : "Register"}</button>
         </form>
     </div>
+      <div className='contact' id='contact'>
+        <footer class="footer">
+          <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+          </div>
+          <ul class="social-icon">
+            <li class="social-icon__item" href="https://www.facebook.com/izet.delibasic/">
+              <FontAwesomeIcon icon={faFacebook} class="social-icon__icon" />
+            </li>
+            <li class="social-icon__item" href="https://www.instagram.com/delibasic55/">
+              <FontAwesomeIcon icon={faInstagram} class="social-icon__icon" />
+            </li>
+            <li class="social-icon__item" href="https://www.linkedin.com/in/izet-delibasic/">
+              <FontAwesomeIcon icon={faGithub} class="social-icon__icon" />
+            </li>
+            <li class="social-icon__item" href="https://github.com/IzetDelibasic">
+              <FontAwesomeIcon icon={faLinkedin} class="social-icon__icon" />
+            </li>
+          </ul>
 
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
+            <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#login">Login</a></li>
+            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+
+          </ul>
+          <p>&copy;2023 Izet Delibasic | All Rights Reserved</p>
+        </footer>
+      </div>
     </div>
+
+    
   );
 }
