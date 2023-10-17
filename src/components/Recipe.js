@@ -35,10 +35,12 @@ export const Recipe = () => {
 
   return (
     <div>
-      <h2>Tasty Treasures - Cooking Ideas for You</h2>
-      <form action="" role="search" id="form">
-        <input type="search" name="q" id="query" placeholder="Search.."/>
-      </form>
+      <div className='recipe-header'>
+        <h2>Tasty Treasures - Cooking Ideas for You</h2>
+        <form action="" role="search" id="form">
+          <input type="search" name="q" id="query" placeholder="Search your recipes.."/>
+        </form>
+      </div>
       <div className='main'>
         <div className='recipe-list'>
           {recipeData.map((recipe, index) => (
