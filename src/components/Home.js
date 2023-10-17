@@ -10,6 +10,13 @@ import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free
 export const Home = () => {
   const [login, setLogin] = useState(false);
   const history = useNavigate();
+  
+  function scrollIntoView(targetId) {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
@@ -42,10 +49,10 @@ export const Home = () => {
       <header className="header">
         <h1 className="logo"><a href="#">Tasty Treasures</a></h1>
         <ul className="main-nav">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#login">Login</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a onClick={() => scrollIntoView('home')}>Home</a></li>
+          <li><a onClick={() => scrollIntoView('about')}>About</a></li>
+          <li><a onClick={() => scrollIntoView('login')}>Login</a></li>
+          <li><a onClick={() => scrollIntoView('contact')}>Contact</a></li>
         </ul>
       </header>
       <div className='home' id='home'>
@@ -108,36 +115,36 @@ export const Home = () => {
             <div class="wave" id="wave4"></div>
           </div>
           <ul className="social-icon">
-  <li className="social-icon__item">
-    <a href="https://www.facebook.com/izet.delibasic/">
-      <FontAwesomeIcon icon={faFacebook} className="social-icon__icon" />
-    </a>
-  </li>
-  <li className="social-icon__item">
-    <a href="https://www.instagram.com/delibasic55/">
-      <FontAwesomeIcon icon={faInstagram} className="social-icon__icon" />
-    </a>
-  </li>
-  <li className="social-icon__item">
-    <a href="https://www.linkedin.com/in/izet-delibasic/">
-      <FontAwesomeIcon icon={faLinkedin} className="social-icon__icon" />
-    </a>
-  </li>
-  <li className="social-icon__item">
-    <a href="https://github.com/IzetDelibasic">
-      <FontAwesomeIcon icon={faGithub} className="social-icon__icon" />
-    </a>
-  </li>
-</ul>
+            <li className="social-icon__item">
+              <a href="https://www.facebook.com/izet.delibasic/">
+                <FontAwesomeIcon icon={faFacebook} className="social-icon__icon" />
+              </a>
+            </li>
+            <li className="social-icon__item">
+              <a href="https://www.instagram.com/delibasic55/">
+                <FontAwesomeIcon icon={faInstagram} className="social-icon__icon" />
+              </a>
+            </li>
+            <li className="social-icon__item">
+              <a href="https://www.linkedin.com/in/izet-delibasic/">
+                <FontAwesomeIcon icon={faLinkedin} className="social-icon__icon" />
+              </a>
+            </li>
+            <li className="social-icon__item">
+              <a href="https://github.com/IzetDelibasic">
+                <FontAwesomeIcon icon={faGithub} className="social-icon__icon" />
+              </a>
+            </li>
+          </ul>
 
 
           <ul class="menu">
-            <li class="menu__item"><a class="menu__link" href="#home">Home</a></li>
-            <li class="menu__item"><a class="menu__link" href="#about">About</a></li>
-            <li class="menu__item"><a class="menu__link" href="#login">Login</a></li>
-            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
-
+            <li class="menu__item"><a class="menu__link" onClick={() => scrollIntoView('home')}>Home</a></li>
+            <li class="menu__item"><a class="menu__link" onClick={() => scrollIntoView('about')}>About</a></li>
+            <li class="menu__item"><a class="menu__link" onClick={() => scrollIntoView('login')}>Login</a></li>
+            <li class="menu__item"><a class="menu__link" onClick={() => scrollIntoView('contact')}>Contact</a></li>
           </ul>
+
           <p>&copy;2023 Izet Delibasic | All Rights Reserved</p>
         </footer>
       </div>
