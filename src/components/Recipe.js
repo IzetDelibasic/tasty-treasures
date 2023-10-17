@@ -28,16 +28,26 @@ export const Recipe = () => {
     });
   }, []);
 
+
   return(
     <div>
       <h2>Tasty Treasures - Cooking Ideas for You</h2>
-      <div className='recipe-list'>
-        {recipeData.map((recipe, index) => (
-          <div key={index} className='recipe'>
-            <img src={recipe.image} alt={`Recipe ${index}`} />
-            <p>{recipe.description}</p>
-          </div>
-      ))}
+      <form action="" role="search" id="form">
+        <input type="search" name="q" id="query" placeholder="Search.."/>
+      </form>
+      <div className='main'>
+        <div className='recipe-list'>
+          {recipeData.map((recipe, index) => (
+            <div key={index} className='recipe'>
+              <img src={recipe.image} alt={`Recipe ${index}`} />
+              <p>{recipe.description}</p>
+            </div>
+        ))}
+        </div>
+      </div>
+      <div className='more-recipes'>
+        <h2>If you want more recipes, click on button:</h2>
+        <button className='more-btn' name='reglog'>New Recipes</button>
       </div>
     </div>
   )
