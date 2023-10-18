@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'; 
-import { auth } from './FirebaseConfig';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 
 export const Home = () => {
-  const [login, setLogin] = useState(false);
-  const history = useNavigate();
-  
   function scrollIntoView(targetId) {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -18,31 +12,6 @@ export const Home = () => {
     }
   }
 
-  const handleSubmit = (e, type) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    if (type === "signup") {
-      createUserWithEmailAndPassword(auth, email, password) 
-        .then((data) => {
-          console.log(data, "authData");
-          history("/recipe");
-        })
-        .catch((err) => {
-          alert(err.code);
-          setLogin(true);
-        });
-    } else {
-      signInWithEmailAndPassword(auth, email, password) 
-        .then((data) => {
-          console.log(data, "authData");
-          history("/recipe");
-        })
-        .catch((err) => {
-          alert(err.code);
-        });
-    }
-  };
 
   return (
     <div>
@@ -85,27 +54,6 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className='login' id='login'>
-        <div className="row">
-            <div
-                className={`form-toggle ${login ? "activeColor" : "pointer"}`}
-                onClick={() => setLogin(false)}>
-                Register
-            </div>
-            <div
-                className={`form-toggle ${!login ? "activeColor" : "pointer"}`}
-                onClick={() => setLogin(true)}>
-                Login
-            </div>
-        </div>
-        <h1>{login ? "Login" : "Register"}</h1>
-        <hr />
-        <form onSubmit={(e) => handleSubmit(e, login ? 'signin' : 'signup')}>
-            <input name='email' placeholder='Email' /><br />
-            <input name='password' placeholder='Password' type='password' /><br /><br />
-            <button className='reglog' name='reglog'>{login ? "Login" : "Register"}</button>
-        </form>
-    </div>
       <div className='contact' id='contact'>
         <footer class="footer">
           <div class="waves">
