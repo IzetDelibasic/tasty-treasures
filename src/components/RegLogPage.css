@@ -11,7 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background: #f4f4f4; /* Dodajte ovu liniju kako biste imali pozadinsku boju */
+  background: #f4f4f4; 
 }
 
 .login {

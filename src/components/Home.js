@@ -2,9 +2,21 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-
-
 export const Home = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const darkModeStyles = {
+    backgroundColor: '#1e1e1e',
+    color: '#fff',
+  };
+
+  const lightModeStyles = {
+    backgroundColor: '#f4f4f4',
+    color: '#808080',
+  };
+
+  const containerStyles = isDarkMode ? darkModeStyles : lightModeStyles;
+
   function scrollIntoView(targetId) {
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
@@ -12,18 +24,25 @@ export const Home = () => {
     }
   }
 
-
   return (
-    <div>
-      <header className="header">
-        <h1 className="logo"><a href="#">Tasty Treasures</a></h1>
-        <ul className="main-nav">
-          <li><a onClick={() => scrollIntoView('home')}>Home</a></li>
-          <li><a onClick={() => scrollIntoView('about')}>About</a></li>
-          <li><a onClick={() => scrollIntoView('login')}>Login</a></li>
-          <li><a onClick={() => scrollIntoView('contact')}>Contact</a></li>
-        </ul>
-      </header>
+    <div style={containerStyles}>
+      <div className="nav-container">
+        <header className="header">
+          <h1 className="logo"><a href="#">Tasty Treasures</a></h1>
+          <ul className="main-nav">
+            <li><a onClick={() => scrollIntoView('home')}>Home</a></li>
+            <li><a onClick={() => scrollIntoView('about')}>About</a></li>
+            <li><a onClick={() => scrollIntoView('login')}>Login</a></li>
+            <li><a onClick={() => scrollIntoView('contact')}>Contact</a></li>
+          </ul>
+        </header>
+        <button
+          onClick={() => setIsDarkMode(!isDarkMode)}
+          className="theme-toggle-button"
+        >
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
+      </div>
       <div className='home' id='home'>
         <div className="main-banner">
           <div className="item">

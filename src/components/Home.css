@@ -382,3 +382,16 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+
+.theme-toggle-button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  top: 20px;
+  right: 20px;
+}
+
+
