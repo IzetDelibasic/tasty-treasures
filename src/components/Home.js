@@ -32,16 +32,16 @@ export const Home = () => {
           <ul className="main-nav">
             <li><a onClick={() => scrollIntoView('home')}>Home</a></li>
             <li><a onClick={() => scrollIntoView('about')}>About</a></li>
-            <li><a onClick={() => scrollIntoView('login')}>Login</a></li>
+            <li><a onClick={() => scrollIntoView('login')}>Start Here</a></li>
             <li><a onClick={() => scrollIntoView('contact')}>Contact</a></li>
+          <button
+            onClick={() => setIsDarkMode(!isDarkMode)}
+            className="theme-toggle-button"
+          >
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
           </ul>
         </header>
-        <button
-          onClick={() => setIsDarkMode(!isDarkMode)}
-          className="theme-toggle-button"
-        >
-          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-        </button>
       </div>
       <div className='home' id='home'>
         <div className="main-banner">
