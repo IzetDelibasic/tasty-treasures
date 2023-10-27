@@ -32,7 +32,7 @@ export const Home = () => {
           <ul className="main-nav">
             <li><a onClick={() => scrollIntoView('home')}>Home</a></li>
             <li><a onClick={() => scrollIntoView('about')}>About</a></li>
-            <li><a onClick={() => scrollIntoView('login')}>Start Here</a></li>
+            <li><a onClick={() => scrollIntoView('start')}>Start Here</a></li>
             <li><a onClick={() => scrollIntoView('contact')}>Contact</a></li>
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
@@ -67,6 +67,26 @@ export const Home = () => {
               <div className="second-row">
                 <div className='about_img'>
                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className='start' id='start'>
+        <div className="about_section">
+          <div className="container">
+            <div className="row">
+              <div className="second-row">
+                <div className='about_img'>
+                  
+                </div>
+              </div>
+              <div className="first-row">
+                <div className="about_taital_main">
+                  <div className="about_taital">Start Here</div>
+                  <p className="about_text">Forget about boring meals and routine cooking! Become a member of our community and access a diverse world of flavors. Register and explore unlimited possibilities for culinary enjoyment.</p>
+                  <p className="about_text">Unlock the gates to the gastronomic empire by registering on our website. With your user account, you'll easily access numerous recipes, tips, and tricks for perfect home-cooked meals.</p>
                 </div>
               </div>
             </div>

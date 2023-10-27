@@ -153,7 +153,7 @@ a {
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-  margin-bottom: 200px;
+  margin-bottom: 50px;
 }
 
 .about_img{
@@ -204,15 +204,6 @@ a {
   padding-top: 10px;
 }
 
-.about_text {
-  width: 100%;
-  float: left;
-  font-size: 16px;
-  color: #4c4c4b;
-  margin: 0px;
-  padding-top: 10px;
-}
-
 .first-row {
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
@@ -223,6 +214,51 @@ a {
   padding-right: 15px;
   padding-left: 15px; 
 }
+
+.start {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: 0 auto; 
+  max-width: 1400px; 
+  padding: 20px;
+}
+
+
+.start .about_section{
+  margin-bottom: 200px;
+}
+
+.start .about_img{
+  background-image: url('./images/chef1.avif');
+  background-size: cover;
+  background-position: 70%
+}
+
+.start .about_img {
+  float: left; 
+  margin-right: 150px; 
+}
+
+.start .about_taital_main {
+  float: left;
+}
+
+.start .first-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.start .first-row .about_img {
+  order: -1;
+  margin-right: 0;
+}
+
+
+
 
 /* Footer */
 
