@@ -64,6 +64,7 @@ body {
   position: relative;
   width: 100%;
   padding: 5px;
+  margin-bottom: 5px;
 }
 
 .login input {
@@ -120,7 +121,7 @@ input[type="submit"]:active {
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 
 .reglog:hover {

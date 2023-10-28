@@ -431,4 +431,18 @@ a {
   border-radius: 5px;
 }
 
+.start button {
+  background: #808080;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
 
+.start button:hover {
+  background: #606060;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faInstagram, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -87,6 +88,9 @@ export const Home = () => {
                   <div className="about_taital">Start Here</div>
                   <p className="about_text">Forget about boring meals and routine cooking! Become a member of our community and access a diverse world of flavors. Register and explore unlimited possibilities for culinary enjoyment.</p>
                   <p className="about_text">Unlock the gates to the gastronomic empire by registering on our website. With your user account, you'll easily access numerous recipes, tips, and tricks for perfect home-cooked meals.</p>
+                  <Link to="/reglog">
+                    <button>Start Here</button>
+                  </Link>
                 </div>
               </div>
             </div>

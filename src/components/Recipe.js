@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../components/Recipe.css';
 
 
@@ -35,12 +36,23 @@ export const Recipe = () => {
 
   return (
     <div>
+      <header className="header">
+          <h1 className="logo"><a href="#">Tasty Treasures</a></h1>
+          <ul className="main-nav">
+            <li>
+              <Link to="/">
+                <button className='reglog'>Sign Out</button>
+              </Link>
+            </li>
+          </ul>
+        </header>
       <div className='recipe-header'>
         <h2>Tasty Treasures - Cooking Ideas for You</h2>
         <form action="" role="search" id="form">
           <input type="search" name="q" id="query" placeholder="Search your recipes.."/>
         </form>
       </div>
+      
       <div className='main'>
         <div className='recipe-list'>
           {recipeData.map((recipe, index) => (

@@ -19,7 +19,7 @@ export const RegLogPage = () => {
           history("/recipe");
         })
         .catch((err) => {
-          alert(err.code);
+          alert("Racun je vec registrovan !");
           setLogin(true);
         });
     } else {
@@ -29,7 +29,7 @@ export const RegLogPage = () => {
           history("/recipe");
         })
         .catch((err) => {
-          alert(err.code);
+          alert("Greska prilikom prijavljivanja, provjerite korisnicke podatke !");
         });
     }
   };
