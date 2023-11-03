@@ -15,14 +15,23 @@
     width: 100%;
 }
 
+.recipe-header h2{
+    color: black;
+    font-size: 40px; 
+    font-weight: normal; 
+    line-height: 55px;
+    background-color: rgb(255 249 196 / 0.3);
+    padding: 5px;
+}
 .recipe-list{
-    background-color: #808080a8;
+    background-color: rgb(255 249 196 / 0.3);
     display: flex;
     flex-wrap: wrap;
     justify-content:space-between ;
     margin-left: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    padding: 15px;
 }
 
 .recipe {
@@ -54,8 +63,8 @@
     margin-bottom: 50px;
 }
 
-h2{
-    background-color: #80808047;
+ .more-recipe h2{
+    background-color: rgb(255 249 196 / 0.5);
     width: 27%;
     border-radius: 10px;
     margin-top: auto;
