@@ -67,6 +67,11 @@ export const Recipe = () => {
         <h1 className="logo"><a href="#">Tasty Treasures</a></h1>
         <ul className="main-nav">
           <li>
+            <Link to ="/food-quotes">
+              <a>FOOD QUOTES</a>
+            </Link>
+          </li>
+          <li>
             <Link to="/">
               <button className='reglog'>Sign Out</button>
             </Link>

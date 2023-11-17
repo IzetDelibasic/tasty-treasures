@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; 
 
-class FoodQuote extends Component {
-    state = {
+const FoodQuote = () => {
+    const [quoteData, setQuoteData] = React.useState({
         quote: '',
         author: ''
-    };
+    });
 
-    fetchFoodQuote = async () => {
+    const navigate = useNavigate(); 
+
+    const fetchFoodQuote = async () => {
         try {
             const apiKey = 'o/uaU0Hb2BDYhBusG6vYeg==GfAjfgVquea6ofy8'; 
 
@@ -24,7 +27,7 @@ class FoodQuote extends Component {
                 const quoteText = randomQuote.quote;
                 const quoteAuthor = randomQuote.author;
 
-                this.setState({
+                setQuoteData({
                     quote: quoteText,
                     author: quoteAuthor
                 });
@@ -34,26 +37,31 @@ class FoodQuote extends Component {
         }
     };
 
-    componentDidMount() {
-        this.fetchFoodQuote();
-    }
+    useEffect(() => {
+        fetchFoodQuote();
+    }, []);
 
-    render() {
-        const { quote, author } = this.state;
+    const handleGoBack = () => {
+        navigate('/recipe'); 
+    };
 
-        return (
-            <div className="app">
-                <div className="card">
-                    <p>Q U O T E</p>
-                    <h1 className="heading">{quote}</h1>
-                    <p className="author">- {author}</p>
-                    <button className="button" onClick={this.fetchFoodQuote}>
-                        <span>GIVE ME A FOOD QUOTE!</span>
-                    </button>
-                </div>
+    const { quote, author } = quoteData;
+
+    return (
+        <div className="app">
+            <div className="card">
+                <p>Q U O T E</p>
+                <h1 className="heading">{quote}</h1>
+                <p className="author">- {author}</p>
+                <button className="button" onClick={fetchFoodQuote}>
+                    <span>GIVE ME A FOOD QUOTE!</span>
+                </button>
+                <button className="button" onClick={handleGoBack}>
+                    <span>GO BACK TO RECIPES</span>
+                </button>
             </div>
-        );
-    }
-}
+        </div>
+    );
+};
 
 export default FoodQuote;
