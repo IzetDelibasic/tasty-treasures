@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom'; 
+import './FoodQuote.css'
 
 const FoodQuote = () => {
     const [quoteData, setQuoteData] = React.useState({
